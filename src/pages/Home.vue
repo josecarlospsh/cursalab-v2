@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-4 md:ml-10 md:mr-56 pt-24 pb-12">
+  <MainLayout>
     <h1 class="flex items-center mb-6 text-2xl md:text-3xl text-gray-900 leading-tight font-bold">
       <svg
         fill="none"
@@ -156,14 +156,14 @@
       <div class="ml-auto flex items-center hidden lg:flex">
         <span class="text-base text-gray-500 hidden lg:inline-block">CAMBIAR VISUALIZACION</span>
         <button class="ml-3 mr-5 text-gray-700" @click.prevent="changeViewList">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="view-list w-6 h-6">
+          <!-- <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="view-list w-6 h-6">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               d="M4 6h16M4 10h16M4 14h16M4 18h16"
             />
-          </svg>
+          </svg>-->
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="view-grid w-6 h-6">
             <path
               stroke-linecap="round"
@@ -189,14 +189,17 @@
       />
       <!-- </div> -->
     </div>
-  </div>
+  </MainLayout>
 </template>
 
 <script>
+import MainLayout from "@/layouts/MainLayout.vue";
 import AnunciosCard from "@/components/anuncios/AnunciosCard.vue";
+
 export default {
   components: {
     AnunciosCard,
+    MainLayout,
   },
   data() {
     return {

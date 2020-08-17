@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-4 md:ml-10 md:mr-56 pt-24 pb-12">
+  <MainLayout>
     <h1 class="flex items-center mb-6 text-2xl md:text-3xl text-gray-900 leading-tight font-bold">
       <svg
         fill="none"
@@ -64,14 +64,17 @@
         />
       </div>
     </div>
-  </div>
+  </MainLayout>
 </template>
 
 <script>
+import MainLayout from "@/layouts/MainLayout.vue";
 import CursosCard from "@/components/cursos/CursosCard.vue";
+
 export default {
   components: {
     CursosCard,
+    MainLayout,
   },
   data() {
     return {

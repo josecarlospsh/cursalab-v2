@@ -2,7 +2,7 @@
   <div class="header bg-white">
     <div class="flex flex-row pl-4 pr-0 md:pl-12 items-center justify-between">
       <div class="logo md:mr-auto">
-        <router-link :to="{ name: 'anuncios' }" class="brand mr-auto">
+        <router-link :to="{ name: 'inicio' }" class="brand mr-auto">
           <img
             src="https://cursalab.pe/wp-content/uploads/2018/11/logo.png"
             alt="Cursalab"
@@ -44,8 +44,8 @@
           <div class="sidemenu" :class="{ 'active' : isSidemenuActive }">
             <!-- <vue-scroll :ops="ops"> -->
             <div>
-              <a
-                href="#"
+              <router-link
+                :to="{ name: 'diplomas' }"
                 class="sidemenu-items flex-col md:flex-row items-center text-white hover:text-secondary py-4 px-4 md:px-12"
               >
                 <svg
@@ -67,9 +67,9 @@
                 </svg>
 
                 <span class="text-sm md:text-lg">Diplomas</span>
-              </a>
-              <a
-                href="#"
+              </router-link>
+              <router-link
+                :to="{ name: 'ranking' }"
                 class="sidemenu-items flex-col md:flex-row items-center text-white hover:text-secondary py-4 px-4 md:px-12"
               >
                 <svg
@@ -86,9 +86,9 @@
                   />
                 </svg>
                 <span class="text-sm md:text-lg">Ranking</span>
-              </a>
-              <a
-                href
+              </router-link>
+              <router-link
+                :to="{ name: 'medallas' }"
                 class="sidemenu-items flex-col md:flex-row items-center text-white hover:text-secondary py-4 px-4 md:px-12"
               >
                 <svg
@@ -105,9 +105,9 @@
                   />
                 </svg>
                 <span class="text-sm md:text-lg">Medallas</span>
-              </a>
-              <a
-                href
+              </router-link>
+              <router-link
+                :to="{ name: 'encuestas' }"
                 class="sidemenu-items flex-col md:flex-row items-center text-white hover:text-secondary py-4 px-4 md:px-12"
               >
                 <svg
@@ -124,7 +124,7 @@
                   />
                 </svg>
                 <span class="text-sm md:text-lg">Encuestas</span>
-              </a>
+              </router-link>
               <div class="sepmenu"></div>
               <router-link
                 :to="{ name: 'ayuda' }"
@@ -164,8 +164,8 @@
                 </svg>
                 <span class="text-sm md:text-lg">Preguntas frec.</span>
               </router-link>
-              <a
-                href
+              <router-link
+                :to="{ name: 'archivo' }"
                 class="sidemenu-items flex-col md:flex-row items-center text-white hover:text-secondary py-4 px-4 md:px-12"
               >
                 <svg
@@ -182,7 +182,7 @@
                   />
                 </svg>
                 <span class="text-sm md:text-lg">Archivo</span>
-              </a>
+              </router-link>
               <router-link
                 :to="{ name: 'login' }"
                 class="sidemenu-items flex-col md:flex-row items-center bg-gray-800 bg-opacity-25 text-white hover:text-secondary py-4 px-4 md:px-12"

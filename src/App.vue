@@ -6,13 +6,18 @@
 </template>
 
 <script>
-import NavBar from "@/components/layout/NavBar.vue";
+import NavBar from "@/components/layouts/NavBar.vue";
 
 export default {
   name: "App",
   components: {
     NavBar,
   },
+  // watch: {
+  //   $route(to, next) {
+  //     document.title = to.meta.title || "CURSALAB V2";
+  //   },
+  // },
 };
 </script>
 

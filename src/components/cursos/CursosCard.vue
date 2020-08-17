@@ -101,6 +101,7 @@
           </div>
           <div class="flex justify-center">
             <router-link
+              v-if="estado != 'bloqueado'"
               class="shadow-3xl text-sm md:text-lg text-white uppercase font-medium py-2 px-4 md:px-8 rounded-full"
               :class="{
                 'bg-primary': estado == 'iniciado',
@@ -110,6 +111,10 @@
               }"
               :to="{ name: 'tema' }"
             >{{ buttonText }}</router-link>
+            <button
+              v-if="estado == 'bloqueado'"
+              class="bg-gray-500 shadow-3xl text-sm md:text-lg text-white uppercase font-medium py-2 px-4 md:px-8 rounded-full cursor-not-allowed"
+            >{{ buttonText }}</button>
           </div>
         </div>
       </div>
