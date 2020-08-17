@@ -19,30 +19,22 @@
             d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
           />
         </svg>
-        <h3 class="text-white font-semibold text-3xl leading-8 mb-6 uppercase">
-          Curso Bloqueado
-        </h3>
-        <p class="text-white font-normal text-xl leading-6 mb-6">
-          Para desbloquearlo antes debes aprobar otros cursos.
-        </p>
+        <h3 class="text-white font-semibold text-3xl leading-8 mb-6 uppercase">Curso Bloqueado</h3>
+        <p
+          class="text-white font-normal text-xl leading-6 mb-6"
+        >Para desbloquearlo antes debes aprobar otros cursos.</p>
       </div>
-      <div
-        class="max-w-sm w-full lg:max-w-full bg-white rounded-t-xl rounded-b-xl shadow-lg"
-      >
-        <img
-          class="w-full rounded-t-xl rounded-b-xl"
-          src="http://placehold.it/500x300"
-          alt
-        />
+      <div class="max-w-sm w-full lg:max-w-full bg-white rounded-t-xl rounded-b-xl shadow-lg">
+        <img class="w-full rounded-t-xl rounded-b-xl" src="http://placehold.it/500x300" alt />
         <div class="p-6">
-          <div class="text-gray-900 font-bold text-2xl leading-8 mb-4">
-            {{ title }}
-          </div>
+          <div
+            class="text-gray-900 font-bold text-lg md:text-2xl leading-6 md:leading-8 mb-4"
+          >{{ title }}</div>
           <div class="mb-6 w-full">
             <div
               class="w-full rounded-md"
               :class="{
-                'bg-teal-200': estado == 'iniciado',
+                'bg-teal-300': estado == 'iniciado',
                 'bg-orange-200': estado == 'noiniciado',
                 'bg-gray-200': estado == 'bloqueado',
                 'bg-teal-200': estado == 'completado',
@@ -52,7 +44,7 @@
                 class="rounded-md text-xs leading-none py-1 text-center text-white"
                 style="width: 61%"
                 :class="{
-                  'bg-teal-600': estado == 'iniciado',
+                  'bg-teal-500': estado == 'iniciado',
                   'bg-orange-600': estado == 'noiniciado',
                   'bg-gray-600': estado == 'bloqueado',
                   'bg-teal-600': estado == 'completado',
@@ -109,7 +101,7 @@
           </div>
           <div class="flex justify-center">
             <router-link
-              class="shadow-3xl text-white uppercase font-medium py-2 px-8 rounded-full"
+              class="shadow-3xl text-sm md:text-lg text-white uppercase font-medium py-2 px-4 md:px-8 rounded-full"
               :class="{
                 'bg-primary': estado == 'iniciado',
                 'bg-orange-500': estado == 'noiniciado',
@@ -117,8 +109,7 @@
                 'bg-teal-500': estado == 'completado',
               }"
               :to="{ name: 'tema' }"
-              >{{ buttonText }}</router-link
-            >
+            >{{ buttonText }}</router-link>
           </div>
         </div>
       </div>

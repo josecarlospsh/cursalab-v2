@@ -16,4 +16,12 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+.tema-multimedia {
+  iframe {
+    height: 300px;
+    @media screen and (min-width: 640px) {
+      height: 500px;
+    }
+  }
+}
 </style>

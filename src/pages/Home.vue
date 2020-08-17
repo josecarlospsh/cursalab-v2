@@ -1,7 +1,12 @@
 <template>
-  <div class="mx-4 md:ml-10 md:mr-56 py-12">
-    <h1 class="flex items-center mb-6 text-3xl text-gray-900 leading-tight font-bold">
-      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="book-open w-10 h-10 mx-3">
+  <div class="mx-4 md:ml-10 md:mr-56 pt-24 pb-12">
+    <h1 class="flex items-center mb-6 text-2xl md:text-3xl text-gray-900 leading-tight font-bold">
+      <svg
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        class="book-open w-6 h-6 md:w-10 md:h-10 mx-3"
+      >
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -32,7 +37,7 @@
             <div
               class="w-full xl:w-1/2 bg-white rounded-t-xxl rounded-b-xxl p-6 xl:p-10 flex flex-col leading-normal"
             >
-              <div class="text-gray-900 font-bold text-2xl leading-8 mb-4">
+              <div class="text-gray-900 font-bold text-lg md:text-2xl leading-6 md:leading-8 mb-4">
                 Titular del anuncio lorem ipsum dolor sit amet adipiscing
                 elit, sed diam nonummy
               </div>
@@ -68,9 +73,10 @@
                 exercitationem praesentium nihil.
               </p>
               <div class="flex justify-center">
-                <button
-                  class="bg-primary shadow-3xl hover:bg-primary-700 text-white uppercase font-medium py-2 px-8 rounded-full"
-                >Continuar el curso</button>
+                <router-link
+                  :to="{ name: 'tema' }"
+                  class="bg-primary shadow-3xl hover:bg-primary-700 text-sm md:text-lg text-white uppercase font-medium py-2 px-4 md:px-8 rounded-full"
+                >Continuar el curso</router-link>
               </div>
             </div>
           </div>
@@ -83,7 +89,7 @@
             <img class="w-full rounded-t-xl rounded-b-xl" src="http://placehold.it/500x300" alt />
             <div class="p-6">
               <div
-                class="text-gray-900 font-bold text-2xl leading-8 mb-4"
+                class="text-gray-900 font-bold text-lg md:text-2xl leading-6 md:leading-8 mb-4"
               >Titular del anuncio lorem ipsum dolor sit amet</div>
               <div class="mb-6 w-full">
                 <div class="w-full bg-teal-200 rounded-md">
@@ -112,9 +118,10 @@
                 </div>
               </div>
               <div class="flex justify-center">
-                <button
-                  class="bg-primary shadow-3xl hover:bg-primary-700 text-white uppercase font-medium py-2 px-8 rounded-full"
-                >Continuar el curso</button>
+                <router-link
+                  :to="{ name: 'tema' }"
+                  class="bg-primary shadow-3xl hover:bg-primary-700 text-sm md:text-lg text-white uppercase font-medium py-2 px-4 md:px-8 rounded-full"
+                >Continuar el curso</router-link>
               </div>
             </div>
           </div>
@@ -123,7 +130,7 @@
     </div>
     <hr class="bg-black h-px mt-10 mb-10" />
     <div class="flex items-center mb-6">
-      <h1 class="flex items-center text-3xl text-gray-900 leading-tight font-bold">
+      <h1 class="flex items-center text-2xl md:text-3xl text-gray-900 leading-tight font-bold">
         <!-- <svg
           class="fill-current w-4 h-4 mx-5"
           xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +142,7 @@
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          class="speakerphone w-10 h-10 mx-3"
+          class="speakerphone w-6 h-6 md:w-10 md:h-10 mx-3"
         >
           <path
             stroke-linecap="round"
@@ -169,6 +176,7 @@
       </div>
     </div>
     <div class="anuncios-list flex flex-wrap" :class="[viewList ? 'flex-col' : 'flex-row']">
+      <!-- <div class="justify-center pt-10 p-4 w-full lg:w-1/2"> -->
       <AnunciosCard
         v-for="(ar, index) in anunciosAr"
         :date="ar.date"
@@ -179,6 +187,7 @@
         :viewList="viewList"
         :key="index"
       />
+      <!-- </div> -->
     </div>
   </div>
 </template>

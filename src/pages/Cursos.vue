@@ -1,7 +1,12 @@
 <template>
-  <div class="mx-4 md:ml-10 md:mr-56 py-12">
-    <h1 class="flex items-center mb-6 text-3xl text-gray-900 leading-tight font-bold">
-      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="tag w-10 h-10 mx-3">
+  <div class="mx-4 md:ml-10 md:mr-56 pt-24 pb-12">
+    <h1 class="flex items-center mb-6 text-2xl md:text-3xl text-gray-900 leading-tight font-bold">
+      <svg
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        class="tag w-6 h-6 md:w-10 md:h-10 mx-3"
+      >
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -13,20 +18,20 @@
     </h1>
     <div class="mt-10">
       <div class="flex flex-wrap justify-end">
-        <div class="categorias-name flex">
+        <div class="categorias-name flex flex-wrap">
           <button
-            class="bg-white hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-blue-500 hover:border-transparent rounded"
+            class="bg-white hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 my-2 border border-blue-500 hover:border-transparent rounded"
           >Escuela nombre</button>
           <button
-            class="bg-white hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-blue-500 hover:border-transparent rounded"
+            class="bg-white hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 my-2 border border-blue-500 hover:border-transparent rounded"
           >Escuela nombre</button>
           <button
-            class="bg-white hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-blue-500 hover:border-transparent rounded"
+            class="bg-white hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 my-2 border border-blue-500 hover:border-transparent rounded"
           >Escuela nombre</button>
           <button
-            class="bg-white hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-blue-500 hover:border-transparent rounded"
+            class="bg-white hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 my-2 border border-blue-500 hover:border-transparent rounded"
           >Escuela nombre</button>
-          <div class="relative mx-2">
+          <div class="relative mx-2 my-2">
             <input
               class="bg-white focus:outline-none focus:shadow-outline border border-gray-600 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
               type="text"

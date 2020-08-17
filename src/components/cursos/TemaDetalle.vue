@@ -76,24 +76,18 @@
         </button>
       </div>
 
-      <div
-        class="flex lg:block w-full my-6 lg:my-0 justify-center lg:justify-start lg:w-1/4"
-      >
+      <div class="flex items-center w-full my-6 lg:my-0 justify-center lg:justify-end lg:w-1/4">
         <router-link
-          class="bg-primary shadow-3xl text-sm text-white uppercase font-medium py-2 px-8 rounded-full"
+          class="bg-primary shadow-3xl text-sm text-white text-center uppercase font-medium py-2 px-8 rounded-full"
           :to="{ name: 'evaluacion' }"
-        >
-          Resolver evaluacion
-        </router-link>
+        >Resolver evaluacion</router-link>
       </div>
     </div>
     <div class="mt-8 flex">
       <div
-        class="p-10 lg:py-12 w-full lg:max-w-full bg-white rounded-t-xxl rounded-b-xxl shadow-lg"
+        class="py-10 px-6 lg:px-10 lg:py-12 w-full lg:max-w-full bg-white rounded-t-xxl rounded-b-xxl shadow-lg"
       >
-        <h2
-          class="flex items-center mb-8 text-2xl text-gray-900 leading-tight font-bold"
-        >
+        <h2 class="flex items-center mb-8 text-2xl text-gray-900 leading-tight font-bold">
           <span>Tema titulo</span>
         </h2>
         <iframe

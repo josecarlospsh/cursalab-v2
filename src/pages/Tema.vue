@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-4 md:ml-10 md:mr-56 py-12">
+  <div class="mx-4 md:ml-10 md:mr-56 pt-24 pb-12">
     <div class="flex flex-wrap">
       <div class="flex flex-col w-full xl:w-2/3 pb-4 xl:pb-0 xl:pr-4">
         <TemaTitle />
