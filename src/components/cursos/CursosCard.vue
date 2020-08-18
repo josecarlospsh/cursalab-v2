@@ -27,9 +27,9 @@
       <div class="max-w-sm w-full lg:max-w-full bg-white rounded-t-xl rounded-b-xl shadow-lg">
         <img class="w-full rounded-t-xl rounded-b-xl" src="http://placehold.it/500x300" alt />
         <div class="p-6">
-          <div
-            class="text-gray-900 font-bold text-lg md:text-2xl leading-6 md:leading-8 mb-4"
-          >{{ title }}</div>
+          <h2
+            class="text-gray-900 font-bold text-xl md:text-2xl leading-6 md:leading-8 mb-4"
+          >{{ title }}</h2>
           <div class="mb-6 w-full">
             <div
               class="w-full rounded-md"
@@ -102,7 +102,7 @@
           <div class="flex justify-center">
             <router-link
               v-if="estado != 'bloqueado'"
-              class="shadow-3xl text-sm md:text-lg text-white uppercase font-medium py-2 px-4 md:px-8 rounded-full"
+              class="shadow-3xl text-sm md:text-lg text-white uppercase font-medium py-3 px-4 md:px-8 rounded-full"
               :class="{
                 'bg-primary': estado == 'iniciado',
                 'bg-orange-500': estado == 'noiniciado',
@@ -113,7 +113,7 @@
             >{{ buttonText }}</router-link>
             <button
               v-if="estado == 'bloqueado'"
-              class="bg-gray-500 shadow-3xl text-sm md:text-lg text-white uppercase font-medium py-2 px-4 md:px-8 rounded-full cursor-not-allowed"
+              class="bg-gray-500 shadow-3xl text-sm md:text-lg text-white uppercase font-medium py-3 px-4 md:px-8 rounded-full cursor-not-allowed"
             >{{ buttonText }}</button>
           </div>
         </div>

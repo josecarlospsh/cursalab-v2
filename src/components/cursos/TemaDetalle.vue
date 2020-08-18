@@ -78,7 +78,7 @@
 
       <div class="flex items-center w-full my-6 lg:my-0 justify-center lg:justify-end lg:w-1/4">
         <router-link
-          class="bg-primary shadow-3xl text-sm text-white text-center uppercase font-medium py-2 px-8 rounded-full"
+          class="bg-primary shadow-3xl text-sm text-white text-center uppercase font-medium py-3 px-4 md:px-8 rounded-full"
           :to="{ name: 'evaluacion' }"
         >Resolver evaluacion</router-link>
       </div>

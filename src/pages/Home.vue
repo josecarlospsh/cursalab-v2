@@ -37,7 +37,7 @@
             <div
               class="w-full xl:w-1/2 bg-white rounded-t-xxl rounded-b-xxl p-6 xl:p-10 flex flex-col leading-normal"
             >
-              <div class="text-gray-900 font-bold text-lg md:text-2xl leading-6 md:leading-8 mb-4">
+              <div class="text-gray-900 font-bold text-xl md:text-2xl leading-6 md:leading-8 mb-4">
                 Titular del anuncio lorem ipsum dolor sit amet adipiscing
                 elit, sed diam nonummy
               </div>
@@ -75,7 +75,7 @@
               <div class="flex justify-center">
                 <router-link
                   :to="{ name: 'tema' }"
-                  class="bg-primary shadow-3xl hover:bg-primary-700 text-sm md:text-lg text-white uppercase font-medium py-2 px-4 md:px-8 rounded-full"
+                  class="bg-primary shadow-3xl hover:bg-primary-700 text-sm md:text-lg text-white uppercase font-medium py-3 px-4 md:px-8 rounded-full"
                 >Continuar el curso</router-link>
               </div>
             </div>
@@ -89,7 +89,7 @@
             <img class="w-full rounded-t-xl rounded-b-xl" src="http://placehold.it/500x300" alt />
             <div class="p-6">
               <div
-                class="text-gray-900 font-bold text-lg md:text-2xl leading-6 md:leading-8 mb-4"
+                class="text-gray-900 font-bold text-xl md:text-2xl leading-6 md:leading-8 mb-4"
               >Titular del anuncio lorem ipsum dolor sit amet</div>
               <div class="mb-6 w-full">
                 <div class="w-full bg-teal-200 rounded-md">
@@ -120,7 +120,7 @@
               <div class="flex justify-center">
                 <router-link
                   :to="{ name: 'tema' }"
-                  class="bg-primary shadow-3xl hover:bg-primary-700 text-sm md:text-lg text-white uppercase font-medium py-2 px-4 md:px-8 rounded-full"
+                  class="bg-primary shadow-3xl hover:bg-primary-700 text-sm md:text-lg text-white uppercase font-medium py-3 px-4 md:px-8 rounded-full"
                 >Continuar el curso</router-link>
               </div>
             </div>

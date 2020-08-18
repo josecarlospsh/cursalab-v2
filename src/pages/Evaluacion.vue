@@ -32,10 +32,10 @@
         </div>
         <div class="flex flex-wrap justify-center mt-8">
           <button
-            class="bg-primary shadow-3xl hover:bg-primary-700 text-white uppercase font-medium py-2 px-8 mx-4 my-3 rounded-full"
+            class="bg-primary shadow-3xl hover:bg-primary-700 text-lg text-white uppercase font-medium py-3 px-8 mx-4 my-3 rounded-full"
           >Enviar</button>
           <button
-            class="bg-orange-500 shadow-3xl hover:bg-orange-700 text-white uppercase font-medium py-2 px-8 mx-4 my-3 rounded-full"
+            class="bg-orange-500 shadow-3xl hover:bg-orange-700 text-lg text-white uppercase font-medium py-3 px-8 mx-4 my-3 rounded-full"
           >Cancelar</button>
         </div>
       </form>

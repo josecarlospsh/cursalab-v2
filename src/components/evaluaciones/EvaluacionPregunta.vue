@@ -21,7 +21,7 @@ export default {
       default: "",
     },
     opciones: {
-      type: Object,
+      type: Array,
     },
   },
 };

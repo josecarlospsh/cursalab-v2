@@ -101,6 +101,16 @@ const routes = [
     meta: {
       title: "Faq",
     },
+    // children: [
+    //   {
+    //     path: "ayuda",
+    //     name: "ayuda",
+    //     component: Ayuda,
+    //     meta: {
+    //       title: "Ayuda",
+    //     },
+    //   },
+    // ],
   },
   {
     path: "/ayuda",

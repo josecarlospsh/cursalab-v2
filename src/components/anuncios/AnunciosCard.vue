@@ -14,12 +14,12 @@
         </div>
         <div class="p-6" :class="[viewList ? 'w-3/4' : 'w-full']">
           <div
-            class="text-gray-900 font-bold text-lg md:text-2xl leading-6 md:leading-8 mb-4"
+            class="text-gray-900 font-bold text-xl md:text-2xl leading-6 md:leading-8 mb-4"
           >{{title}}</div>
           <p class="text-gray-700 text-base mb-8">{{description}}</p>
           <div class="flex justify-center">
             <button
-              class="flex items-center bg-primary shadow-3xl hover:bg-primary-700 text-sm md:text-lg text-white uppercase font-medium py-2 px-8 rounded-full"
+              class="flex items-center bg-primary shadow-3xl hover:bg-primary-700 text-sm md:text-lg text-white uppercase font-medium py-3 px-4 md:px-8 rounded-full"
             >
               <svg
                 v-if="buttonIcon == 'eye'"

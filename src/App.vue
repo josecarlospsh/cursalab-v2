@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <NavBar />
+    <NavBar v-if="$route.name != 'login'" />
+    <!-- {{$route}} -->
     <router-view :key="$route.fullPath" />
   </div>
 </template>
