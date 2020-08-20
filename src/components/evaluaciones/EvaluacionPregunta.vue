@@ -1,7 +1,7 @@
 <template>
   <div class="evaluacion-pregunta py-6 md:py-10 px-8 md:px-24">
     <h3 class="flex items-end mb-8 text-lg text-gray-900 leading-tight font-bold">
-      <span class="font-bold text-2xl mr-2">01.</span>
+      <span class="font-bold text-2xl mr-2" v-html="`0` + nro"></span>
       {{ title }}
     </h3>
     <div class="flex flex-col">
@@ -23,6 +23,9 @@ export default {
     opciones: {
       type: Array,
     },
+    nro: {
+      type: Number,
+    },
   },
 };
 </script>
@@ -43,7 +46,7 @@ export default {
   cursor: pointer;
   line-height: 25px;
   display: inline-block;
-  color: #666;
+  @apply text-gray-600;
 }
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {
@@ -55,14 +58,14 @@ export default {
   height: 25px;
   border: 1px solid #ddd;
   border-radius: 100%;
-  background: #fff;
+  @apply bg-white;
 }
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
   content: "";
   width: 13px;
   height: 13px;
-  background: #444;
+  @apply bg-secondary;
   position: absolute;
   top: 6px;
   left: 6px;

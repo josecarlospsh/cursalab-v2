@@ -27,6 +27,7 @@
             v-for="(pregunta, index) in preguntasAr"
             :title="pregunta.title"
             :opciones="pregunta.opciones"
+            :nro="index+1"
             :key="index"
           />
         </div>

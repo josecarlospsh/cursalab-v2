@@ -1,9 +1,9 @@
 <template>
   <div class="tema-detalle">
     <div class="flex flex-wrap">
-      <div class="flex w-full lg:w-3/4 overflow-hidden">
+      <div class="flex w-full lg:w-3/4 overflow-x-auto">
         <button
-          class="flex items-center bg-white hover:bg-blue-500 text-sm text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-blue-500 hover:border-transparent rounded"
+          class="flex items-center bg-transparent hover:bg-secondary text-sm text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-secondary hover:border-transparent rounded"
         >
           <svg
             fill="none"
@@ -21,7 +21,7 @@
           <span>About</span>
         </button>
         <button
-          class="flex items-center bg-white hover:bg-blue-500 text-sm text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-blue-500 hover:border-transparent rounded"
+          class="flex items-center bg-transparent hover:bg-secondary text-sm text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-secondary hover:border-transparent rounded"
         >
           <svg
             fill="none"
@@ -39,7 +39,7 @@
           <span>Contenido uno</span>
         </button>
         <button
-          class="flex items-center bg-white hover:bg-blue-500 text-sm text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-blue-500 hover:border-transparent rounded"
+          class="flex items-center bg-transparent hover:bg-secondary text-sm text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-secondary hover:border-transparent rounded"
         >
           <svg
             fill="none"
@@ -57,7 +57,7 @@
           <span>Contenido dos</span>
         </button>
         <button
-          class="flex items-center bg-white hover:bg-blue-500 text-sm text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-blue-500 hover:border-transparent rounded"
+          class="flex items-center bg-transparent hover:bg-secondary text-sm text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-secondary hover:border-transparent rounded"
         >
           <svg
             fill="none"
@@ -91,9 +91,9 @@
           <span>Tema titulo</span>
         </h2>
         <iframe
-          src="https://open.spotify.com/embed/track/6WrI0LAC5M1Rw2MnX2ZvEg"
+          src="https://open.spotify.com/embed-podcast/episode/4on1bq9jCxUBEfwlHOBO2g"
           width="100%"
-          height="80"
+          height="180"
           frameborder="0"
           allowtransparency="true"
           allow="encrypted-media"
@@ -102,7 +102,7 @@
         <iframe
           width="100%"
           height="500"
-          src="https://www.youtube.com/embed/-5KAN9_CzSA"
+          src="https://www.youtube.com/embed/ub3snw1_T-o"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen

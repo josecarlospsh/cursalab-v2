@@ -24,7 +24,7 @@
           :to="{ name: 'progreso' }"
           class="border-b-4 border-white text-primary mx-8 py-4 hidden lg:block"
         >Progreso</router-link>
-        <div class="flex items-center py-3 px-6 md:px-12 w-full opsidemenu">
+        <div class="flex items-center py-3 px-6 md:px-8 w-full opsidemenu">
           <img
             class="w-10 h-10 rounded-full mr-0 md:mr-4"
             src="https://scontent.flim8-1.fna.fbcdn.net/v/t31.0-1/c0.0.160.160a/p160x160/1957720_10202680309021840_1243974886_o.jpg?_nc_cat=109&_nc_sid=dbb9e7&_nc_eui2=AeE-eoKP7fAqWJVc3w-N4eT32iZcuvlB2QraJly6-UHZCj10zmI1T5CFplXSDYPcv6Q&_nc_ohc=qYSNIQIkUmoAX_egmhj&_nc_ht=scontent.flim8-1.fna&oh=126d319215a8cd1e881141028e9a6e4f&oe=5F59033E"
@@ -32,12 +32,25 @@
           />
           <span class="hidden md:inline-block">Jose Carlos Pajuelo</span>
           <button @click.prevent="toggleSidemenu" class="ml-5">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="plus w-6 h-6">
+            <svg
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              class="plus w-6 h-6"
+              v-if="!isSidemenuActive"
+            >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
                 d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+              />
+            </svg>
+            <svg v-if="isSidemenuActive" viewBox="0 0 20 20" fill="currentColor" class="x w-6 h-6">
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
               />
             </svg>
           </button>
@@ -265,7 +278,7 @@ $color-secondary: #29ace6;
 .sidemenu {
   background-color: $color-primary;
   position: absolute;
-  height: 100vh;
+  height: calc(100vh - 64px);
   width: 0;
   top: 100%;
   right: 0;

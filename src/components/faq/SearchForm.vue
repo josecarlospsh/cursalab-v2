@@ -1,7 +1,7 @@
 <template>
   <div class="search-frm">
     <div class="flex justify-center my-8 mx-2">
-      <div class="relative w-full md:w-2/3">
+      <form class="relative w-full md:w-2/3">
         <input
           class="bg-white focus:outline-none focus:shadow-outline border border-gray-600 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
           type="text"
@@ -19,7 +19,7 @@
             />
           </svg>
         </button>
-      </div>
+      </form>
     </div>
   </div>
 </template>

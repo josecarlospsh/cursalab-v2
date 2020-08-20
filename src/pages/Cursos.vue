@@ -20,18 +20,18 @@
       <div class="flex flex-wrap justify-end">
         <div class="categorias-name flex flex-wrap">
           <button
-            class="bg-white hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 my-2 border border-blue-500 hover:border-transparent rounded"
+            class="bg-white hover:bg-secondary text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 my-2 border border-secondary hover:border-transparent rounded"
           >Escuela nombre</button>
           <button
-            class="bg-white hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 my-2 border border-blue-500 hover:border-transparent rounded"
+            class="bg-white hover:bg-secondary text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 my-2 border border-secondary hover:border-transparent rounded"
           >Escuela nombre</button>
           <button
-            class="bg-white hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 my-2 border border-blue-500 hover:border-transparent rounded"
+            class="bg-white hover:bg-secondary text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 my-2 border border-secondary hover:border-transparent rounded"
           >Escuela nombre</button>
           <button
-            class="bg-white hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 my-2 border border-blue-500 hover:border-transparent rounded"
+            class="bg-white hover:bg-secondary text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 my-2 border border-secondary hover:border-transparent rounded"
           >Escuela nombre</button>
-          <div class="relative mx-2 my-2">
+          <form class="relative mx-2 my-2">
             <input
               class="bg-white focus:outline-none focus:shadow-outline border border-gray-600 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
               type="text"
@@ -49,7 +49,7 @@
                 />
               </svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
       <div class="cursos flex flex-wrap">
