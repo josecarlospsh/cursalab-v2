@@ -1,19 +1,7 @@
 <template>
-  <MainLayout>
+  <div class="mx-4 md:ml-16 md:mr-60 pt-24 pb-12">
     <h1 class="flex items-center mb-6 text-2xl md:text-3xl text-gray-900 leading-tight font-bold">
-      <svg
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        class="book-open w-6 h-6 md:w-10 md:h-10 mx-3"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-        />
-      </svg>
+      <IconSvg name="book-open" />
       <span>Continuar curso:</span>
     </h1>
     <div class="flex flex-wrap items-stretch">
@@ -23,51 +11,38 @@
           <div
             class="max-w-sm w-full lg:max-w-full xl:flex bg-white rounded-t-xxl rounded-b-xxl shadow-lg"
           >
-            <img
-              class="w-full xl:w-1/2 flex rounded-t-xxl rounded-b-xxl"
-              src="http://placehold.it/500x300"
-              alt
-            />
-
-            <!-- <div
-              class="w-full lg:w-1/2 flex bg-cover rounded-t-xl rounded-b-xl text-center overflow-hidden shadow-lg"
-              style="background-image: url('http://placehold.it/600x300')"
-              title
-            ></div>-->
             <div
-              class="w-full xl:w-1/2 bg-white rounded-t-xxl rounded-b-xxl p-6 xl:p-10 flex flex-col leading-normal"
+              class="w-full xl:w-1/2 flex items-center justify-center bg-primary_bg rounded-t-xxl rounded-b-xxl"
             >
-              <div class="text-gray-900 font-bold text-xl md:text-2xl leading-6 md:leading-8 mb-4">
+              <img
+                class="flex-none rounded-t-xxl rounded-b-xxl xl:rounded-none h-auto"
+                src="https://static.universidadcorporativafp.com.pe/images/FP-2ACTUALIZACI%C3%93N-01.png"
+                alt
+              />
+            </div>
+            <div
+              class="w-full xl:w-1/2 bg-white rounded-t-xxl rounded-b-xxl p-6 xl:px-10 xl:pt-20 xl:pb-24 flex flex-col leading-normal"
+            >
+              <div
+                class="lg:text-overflow-2 xl:text-overflow-3 text-gray-600 font-bold text-xl md:text-2xl leading-6 md:leading-8 mb-4"
+              >
                 Titular del anuncio lorem ipsum dolor sit amet adipiscing
                 elit, sed diam nonummy
               </div>
               <div class="mb-6 w-full">
-                <div class="w-full bg-teal-200 rounded-md">
+                <div class="w-full bg-secondary_bg rounded-md">
                   <div
-                    class="bg-teal-600 rounded-md text-xs leading-none py-1 text-center text-white"
+                    class="bg-secondary rounded-md text-xs leading-none py-1 text-center text-white"
                     style="width: 12%"
                   ></div>
                 </div>
                 <div class="text-sm mt-4">
                   <p class="text-gray-600 leading-none flex items-center">
-                    <svg
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      class="clock w-6 h-6 mr-2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    12% completado
+                    <IconSvg name="clock" />12% completado
                   </p>
                 </div>
               </div>
-              <p class="text-gray-700 text-base mb-8 hidden xl:block">
+              <p class="hidden xl:block text-gray-600 text-base mb-2">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptatibus quia, nulla! Maiores et perferendis eaque,
                 exercitationem praesentium nihil.
@@ -75,7 +50,7 @@
               <div class="flex justify-center">
                 <router-link
                   :to="{ name: 'tema' }"
-                  class="bg-primary shadow-3xl hover:bg-primary-700 text-sm md:text-lg text-white uppercase font-medium py-3 px-4 md:px-8 rounded-full"
+                  class="xl:absolute xl:bottom-10 bg-primary shadow-3xl hover:bg-primary_hover text-sm md:text-base text-white uppercase font-medium py-3 px-5 md:px-10 rounded-full"
                 >Continuar el curso</router-link>
               </div>
             </div>
@@ -86,41 +61,32 @@
         <div class="flex flex-wrap relative">
           <p class="absolute -top-10 text-base text-gray-600 px-6 py-2">04 Julio 2020</p>
           <div class="max-w-sm w-full lg:max-w-full bg-white rounded-t-xl rounded-b-xl shadow-lg">
-            <img class="w-full rounded-t-xl rounded-b-xl" src="http://placehold.it/500x300" alt />
-            <div class="p-6">
+            <img
+              class="w-full rounded-t-xl rounded-b-xl"
+              src="https://static.universidadcorporativafp.com.pe/images/1194402608.png"
+              alt
+            />
+            <div class="relative p-6 xl:pb-24">
               <div
-                class="text-gray-900 font-bold text-xl md:text-2xl leading-6 md:leading-8 mb-4"
+                class="lg:text-overflow-2 text-gray-600 font-bold text-xl md:text-2xl leading-6 md:leading-8 mb-4"
               >Titular del anuncio lorem ipsum dolor sit amet</div>
               <div class="mb-6 w-full">
-                <div class="w-full bg-teal-200 rounded-md">
+                <div class="w-full bg-secondary_bg rounded-md">
                   <div
-                    class="bg-teal-600 rounded-md text-xs leading-none py-1 text-center text-white"
+                    class="bg-secondary rounded-md text-xs leading-none py-1 text-center text-white"
                     style="width: 61%"
                   ></div>
                 </div>
                 <div class="text-sm mt-4">
                   <p class="text-gray-600 leading-none flex items-center">
-                    <svg
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      class="clock w-6 h-6 mr-2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    61% completado
+                    <IconSvg name="clock" />61% completado
                   </p>
                 </div>
               </div>
               <div class="flex justify-center">
                 <router-link
                   :to="{ name: 'tema' }"
-                  class="bg-primary shadow-3xl hover:bg-primary-700 text-sm md:text-lg text-white uppercase font-medium py-3 px-4 md:px-8 rounded-full"
+                  class="xl:absolute xl:bottom-10 bg-primary shadow-3xl hover:bg-primary_hover text-sm md:text-base text-white uppercase font-medium py-3 px-5 md:px-10 rounded-full"
                 >Continuar el curso</router-link>
               </div>
             </div>
@@ -128,50 +94,17 @@
         </div>
       </div>
     </div>
-    <hr class="bg-black h-px mt-10 mb-10" />
+    <hr class="bg-gray-700 h-px mt-10 mx-4 mb-10" />
     <div class="flex items-center mb-6">
       <h1 class="flex items-center text-2xl md:text-3xl text-gray-900 leading-tight font-bold">
-        <!-- <svg
-          class="fill-current w-4 h-4 mx-5"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-        >
-          <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-        </svg>-->
-        <svg
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          class="speakerphone w-6 h-6 md:w-10 md:h-10 mx-3"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
-          />
-        </svg>
-        <span>Ultimos anuncios</span>
+        <IconSvg name="speakerphone" />
+        <span>Últimos anuncios</span>
       </h1>
       <div class="ml-auto flex items-center hidden lg:flex">
-        <span class="text-base text-gray-500 hidden lg:inline-block">CAMBIAR VISUALIZACION</span>
-        <button class="ml-3 mr-5 text-gray-700" @click.prevent="changeViewList">
-          <!-- <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="view-list w-6 h-6">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 10h16M4 14h16M4 18h16"
-            />
-          </svg>-->
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="view-grid w-6 h-6">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-            />
-          </svg>
+        <span class="text-base text-gray-500 hidden lg:inline-block">CAMBIAR VISUALIZACIÓN</span>
+        <button class="ml-3 mr-5 text-gray-900 hover:text-primary" @click.prevent="changeViewList">
+          <IconSvg name="view-grid" v-if="viewList != false" />
+          <IconSvg name="view-list" v-else />
         </button>
       </div>
     </div>
@@ -189,17 +122,17 @@
       />
       <!-- </div> -->
     </div>
-  </MainLayout>
+  </div>
 </template>
 
 <script>
-import MainLayout from "@/layouts/MainLayout.vue";
 import AnunciosCard from "@/components/anuncios/AnunciosCard.vue";
+import IconSvg from "@/components/ui/IconSvg.vue";
 
 export default {
   components: {
     AnunciosCard,
-    MainLayout,
+    IconSvg,
   },
   data() {
     return {
@@ -207,15 +140,16 @@ export default {
       anunciosAr: [
         {
           date: "04 Julio 2020",
-          title: "Titular del anuncio lorem ipsum dolor sit amet",
+          title: "¡Universidad Corporativa se renueva!",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam repudiandae, illum iure dignissimos consequuntur tempora explicabo dolorum natus facere accusamus vitae ea ex expedita sint excepturi, nulla impedit nesciunt similique!",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus vitae excepturi!",
           buttonIcon: "eye",
           buttonText: "Ver mas",
         },
         {
           date: "05 Julio 2020",
-          title: "Titular del anuncio lorem ipsum dolor sit amet",
+          title:
+            "Titular del anuncio lorem ipsum dolor sit amet illum iure dignissimos consequuntur tempora",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam repudiandae, illum iure dignissimos consequuntur tempora explicabo dolorum natus facere accusamus vitae ea ex expedita sint excepturi, nulla impedit nesciunt similique!",
           buttonIcon: "cloud-download",
@@ -223,9 +157,9 @@ export default {
         },
         {
           date: "05 Julio 2020",
-          title: "Titular del anuncio lorem ipsum dolor sit amet",
+          title: "Titular del anuncio lorem ipsum dolor consequuntur tempora",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam repudiandae, illum iure dignissimos consequuntur tempora explicabo dolorum natus facere accusamus vitae ea ex expedita sint excepturi, nulla impedit nesciunt similique!",
+            "Quibusdam repudiandae, illum iure dignissimos consequuntur tempora explicabo dolorum natus facere accusamus vitae ea ex expedita sint excepturi, nulla impedit nesciunt similique!",
           buttonIcon: "arrow-narrow-right",
           buttonText: "Ir al detalle",
         },

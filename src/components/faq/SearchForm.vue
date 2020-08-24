@@ -8,7 +8,7 @@
           placeholder="Buscar"
         />
         <button
-          class="absolute top-0 bottom-0 right-0 bg-transparent text-gray-700 font-semibold hover:text-gray py-2 px-4 rounded"
+          class="absolute top-0 bottom-0 right-0 bg-transparent text-gray-600 font-semibold hover:text-gray py-2 px-4 rounded"
         >
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="search w-6 h-6">
             <path
@@ -30,6 +30,8 @@ export default {
 };
 </script>
 
-<style lang="sass" scoped>
-
+<style lang="scss" scoped>
+::placeholder {
+  @apply text-gray-600;
+}
 </style>

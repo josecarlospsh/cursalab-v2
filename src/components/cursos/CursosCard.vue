@@ -1,120 +1,75 @@
 <template>
-  <div class="flex justify-center w-full lg:w-1/2 xl:w-1/3 pt-10 p-4">
+  <div class="flex justify-center w-full lg:w-1/2 xl:w-1/3 py-12 px-4 xl:px-8">
     <div
       class="flex flex-wrap relative"
       :class="{ 'bloqueado lock-active': estado == 'bloqueado' }"
     >
-      <div v-if="estado == 'bloqueado'" class="bloqueado-msg">
-        <svg
-          v-if="estado == 'bloqueado'"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          class="lock-closed w-12 h-12 my-5"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-          />
-        </svg>
-        <h3 class="text-white font-semibold text-3xl leading-8 mb-6 uppercase">Curso Bloqueado</h3>
+      <div v-if="estado == 'bloqueado'" class="bloqueado-msg p-3 lg:p-8">
+        <IconSvg name="lock-big" v-if="estado == 'bloqueado'" />
+        <h3
+          class="text-white font-semibold text-2xl leading-8 mb-4 md:mb-6 uppercase"
+        >Curso Bloqueado</h3>
         <p
-          class="text-white font-normal text-xl leading-6 mb-6"
+          class="text-white font-normal text-lg leading-6 mb-6"
         >Para desbloquearlo antes debes aprobar otros cursos.</p>
       </div>
       <div class="max-w-sm w-full lg:max-w-full bg-white rounded-t-xl rounded-b-xl shadow-lg">
-        <img class="w-full rounded-t-xl rounded-b-xl" src="http://placehold.it/500x300" alt />
+        <img
+          class="w-full rounded-t-xl rounded-b-xl"
+          src="https://static.universidadcorporativafp.com.pe/images/25601526.PNG"
+          alt
+        />
         <div class="p-6">
           <h2
-            class="text-gray-900 font-bold text-xl md:text-2xl leading-6 md:leading-8 mb-4"
+            class="curso-title text-gray-600 font-bold text-xl md:text-2xl leading-6 md:leading-8 mb-4"
           >{{ title }}</h2>
           <div class="mb-6 w-full">
             <div
               class="w-full rounded-md"
               :class="{
-                'bg-teal-300': estado == 'iniciado',
+                'bg-secondary_bg': estado == 'iniciado',
                 'bg-orange-200': estado == 'noiniciado',
                 'bg-gray-200': estado == 'bloqueado',
-                'bg-teal-200': estado == 'completado',
+                'bg-secondary_hover': estado == 'completado',
               }"
             >
               <div
                 class="rounded-md text-xs leading-none py-1 text-center text-white"
                 style="width: 61%"
                 :class="{
-                  'bg-teal-500': estado == 'iniciado',
+                  'bg-secondary': estado == 'iniciado',
                   'bg-orange-600': estado == 'noiniciado',
                   'bg-gray-600': estado == 'bloqueado',
-                  'bg-teal-600': estado == 'completado',
+                  'bg-secondary_hover': estado == 'completado',
                 }"
               ></div>
             </div>
             <div class="text-sm mt-4">
               <p class="text-gray-600 leading-none flex items-center">
-                <svg
-                  v-if="estado == 'iniciado' || estado == 'noiniciado'"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  class="clock w-6 h-6 mr-2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                <svg
-                  v-if="estado == 'bloqueado'"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  class="lock-closed w-6 h-6 mr-2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                  />
-                </svg>
-                <svg
-                  v-if="estado == 'completado'"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  class="thumb-up w-6 h-6 mr-2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
-                  />
-                </svg>
-                {{ progreso }}
+                <IconSvg name="clock" v-if="estado == 'iniciado'" />
+                <IconSvg name="timer" v-if="estado == 'noiniciado'" />
+                <IconSvg name="lock" v-if="estado == 'bloqueado'" />
+                <IconSvg name="thumb-up" v-if="estado == 'completado'" />
+                <span>{{ progreso }}</span>
               </p>
             </div>
           </div>
           <div class="flex justify-center">
             <router-link
               v-if="estado != 'bloqueado'"
-              class="shadow-3xl text-sm md:text-lg text-white uppercase font-medium py-3 px-4 md:px-8 rounded-full"
+              class="w-48 md:w-60 shadow-3xl text-sm md:text-base text-white text-center uppercase font-medium py-3 px-0 md:px-1 rounded-full absolute -bottom-8"
               :class="{
-                'bg-primary': estado == 'iniciado',
-                'bg-orange-500': estado == 'noiniciado',
-                'bg-gray-500 cursor-not-allowed': estado == 'bloqueado',
-                'bg-teal-500': estado == 'completado',
+                'bg-primary hover:bg-primary_hover': estado == 'iniciado',
+                'bg-orange-500 hover:bg-orange-600': estado == 'noiniciado',
+                'bg-gray-300 cursor-not-allowed': estado == 'bloqueado',
+                'bg-secondary hover:bg-secondary_hover': estado == 'completado',
               }"
               :to="{ name: 'tema' }"
             >{{ buttonText }}</router-link>
-            <button
+            <div
               v-if="estado == 'bloqueado'"
-              class="bg-gray-500 shadow-3xl text-sm md:text-lg text-white uppercase font-medium py-3 px-4 md:px-8 rounded-full cursor-not-allowed"
-            >{{ buttonText }}</button>
+              class="btn-lock w-48 md:w-60 bg-gray-300 shadow-3xl text-sm md:text-base text-white text-center uppercase font-medium py-3 px-0 md:px-1 rounded-full absolute -bottom-8 cursor-default"
+            >{{ buttonText }}</div>
           </div>
         </div>
       </div>
@@ -123,6 +78,7 @@
 </template>
 
 <script>
+import IconSvg from "@/components/ui/IconSvg.vue";
 export default {
   props: {
     title: {
@@ -146,6 +102,12 @@ export default {
       type: String,
       default: "noiniciado",
     },
+    icon: {
+      type: String,
+    },
+  },
+  components: {
+    IconSvg,
   },
   data() {
     return {};
@@ -153,17 +115,24 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.curso-title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 .bloqueado {
   position: relative;
   .bloqueado-msg {
     opacity: 0;
-    @apply absolute w-full h-full flex flex-col items-center justify-center text-center text-white p-12;
+    @apply absolute w-full h-full flex flex-col items-center justify-center text-center text-white px-8 py-10;
     z-index: 2;
   }
   &:after {
     @apply bg-transparent absolute w-full h-full;
     @apply rounded-t-xl rounded-b-xl;
     content: "";
+    height: 106%;
     z-index: 1;
   }
   &:hover,
@@ -173,6 +142,11 @@ export default {
     }
     .bloqueado-msg {
       opacity: 1;
+    }
+  }
+  &:hover {
+    .btn-lock {
+      @apply bg-primary bg-opacity-90 text-opacity-25;
     }
   }
 }

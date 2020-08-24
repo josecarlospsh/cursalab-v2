@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <!-- <NavBar /> -->
-    <div class="mx-4 md:ml-10 md:mr-56 pt-24 pb-12">
+    <div class="mx-4 md:ml-20 md:mr-56 pt-24 pb-12">
       <slot></slot>
     </div>
   </div>

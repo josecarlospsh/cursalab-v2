@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-4 md:ml-10 md:mr-56 pt-24 pb-12">
+  <div class="mx-4 md:ml-24 md:mr-40 pt-24 pb-12">
     <Logo />
     <TabNavigation :page="page" />
     <SearchForm />
@@ -37,11 +37,13 @@ export default {
         {
           pregunta:
             "¿Qué hacer cuando agoto mis intentos para rendir la evaluación?",
-          respuesta: "lorem",
+          respuesta:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fugit perferendis fugiat neque, necessitatibus odio possimus non obcaecati corporis eaque ducimus nihil culpa porro facilis autem tenetur voluptas et ad!",
         },
         {
           pregunta: "¿Porque no puedo puedo abrir una evaluación?",
-          respuesta: "lorem",
+          respuesta:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fugit perferendis fugiat neque, necessitatibus odio possimus non obcaecati corporis eaque ducimus nihil culpa porro facilis autem tenetur voluptas et ad!",
         },
         {
           pregunta: "¿Porque no puedo puedo abrir una evaluación?",
@@ -51,11 +53,13 @@ export default {
         {
           pregunta:
             "¿Qué hacer cuando agoto mis intentos para rendir la evaluación?",
-          respuesta: "lorem",
+          respuesta:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fugit perferendis fugiat neque, necessitatibus odio possimus non obcaecati corporis eaque ducimus nihil culpa porro facilis autem tenetur voluptas et ad!",
         },
         {
           pregunta: "¿Porque no puedo puedo abrir una evaluación?",
-          respuesta: "lorem",
+          respuesta:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fugit perferendis fugiat neque, necessitatibus odio possimus non obcaecati corporis eaque ducimus nihil culpa porro facilis autem tenetur voluptas et ad!",
         },
       ],
     };

@@ -25,32 +25,13 @@
       >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus nobis, fugit reiciendis ducimus aliquam natus dicta magni soluta aperiam qui, quo necessitatibus fuga odit autem, minus officiis modi tempora impedit.</div>
       <div class="flex justify-end px-6 py-2">
         <button class="m-1 text-gray-500 hover:text-gray-600">
-          <svg viewBox="0 0 20 20" fill="currentColor" class="save w-6 h-6">
-            <path
-              d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h5v5.586l-1.293-1.293zM9 4a1 1 0 012 0v2H9V4z"
-            />
-          </svg>
+          <IconSvg name="save" classes="w-6 h-6" />
         </button>
         <button class="m-1 text-gray-500 hover:text-gray-600">
-          <svg viewBox="0 0 20 20" fill="currentColor" class="pencil-alt w-6 h-6">
-            <path
-              d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"
-            />
-            <path
-              fill-rule="evenodd"
-              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-              clip-rule="evenodd"
-            />
-          </svg>
+          <IconSvg name="dropper" classes="w-6 h-6" />
         </button>
         <button class="m-1 text-gray-500 hover:text-gray-600">
-          <svg viewBox="0 0 20 20" fill="currentColor" class="trash w-6 h-6">
-            <path
-              fill-rule="evenodd"
-              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-              clip-rule="evenodd"
-            />
-          </svg>
+          <IconSvg name="delete" classes="w-6 h-6" />
         </button>
       </div>
     </div>
@@ -76,38 +57,19 @@
               <span
                 class="tooltip-text bg-white border border-gray-400 rounded text-gray-600 text-xs text-center w-32 left-1/2 -top-5 transform -translate-x-1/2 -translate-y-1/2"
               >Editar nota</span>
-              <svg viewBox="0 0 20 20" fill="currentColor" class="save w-8 h-8">
-                <path
-                  d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h5v5.586l-1.293-1.293zM9 4a1 1 0 012 0v2H9V4z"
-                />
-              </svg>
+              <IconSvg name="edit" classes="w-8 h-8" />
             </button>
             <button class="m-1 text-white hover:text-white tooltip">
               <span
                 class="tooltip-text bg-white border border-gray-400 rounded text-gray-600 text-xs text-center w-32 left-1/2 -top-5 transform -translate-x-1/2 -translate-y-1/2"
               >Elegir otro color para nota</span>
-              <svg viewBox="0 0 20 20" fill="currentColor" class="pencil-alt w-8 h-8">
-                <path
-                  d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              <IconSvg name="dropper" classes="w-8 h-8" />
             </button>
             <button class="m-1 text-white hover:text-white tooltip">
               <span
                 class="tooltip-text bg-white border border-gray-400 rounded text-gray-600 text-xs text-center w-32 left-1/2 -top-5 transform -translate-x-1/2 -translate-y-1/2"
               >Borrar</span>
-              <svg viewBox="0 0 20 20" fill="currentColor" class="trash w-8 h-8">
-                <path
-                  fill-rule="evenodd"
-                  d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              <IconSvg name="delete" classes="w-8 h-8" />
             </button>
           </div>
         </div>

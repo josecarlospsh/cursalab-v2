@@ -23,12 +23,10 @@ export default {
 </script>
 
 <style lang="scss">
-$color-body: #f2f2f2;
-
 body {
-  background-color: $color-body;
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   font-size: 18px;
+  @apply text-gray-900 bg-body;
 }
 </style>

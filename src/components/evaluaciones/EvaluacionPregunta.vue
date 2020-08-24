@@ -1,11 +1,15 @@
 <template>
   <div class="evaluacion-pregunta py-6 md:py-10 px-8 md:px-24">
-    <h3 class="flex items-end mb-8 text-lg text-gray-900 leading-tight font-bold">
-      <span class="font-bold text-2xl mr-2" v-html="`0` + nro"></span>
+    <h3 class="flex items-end mb-8 text-lg text-gray-600 leading-tight font-bold">
+      <span class="font-bold text-2xl mr-1" v-html="`0` + nro + `.`"></span>
       {{ title }}
     </h3>
     <div class="flex flex-col">
-      <div class="flex flex-wrap items-center mb-3" v-for="(opc, index) in opciones" :key="index">
+      <div
+        class="flex flex-wrap items-center text-lg mb-4"
+        v-for="(opc, index) in opciones"
+        :key="index"
+      >
         <input type="radio" :id="`pre` + index" class="mr-3 text-lg w-3 h-5 bg-primary" />
         <label :for="`pre` + index">{{ opc }}</label>
       </div>
@@ -32,7 +36,18 @@ export default {
 
 <style lang="scss" scoped>
 .evaluacion-pregunta:nth-child(2n) {
-  @apply bg-gray-200;
+  @apply bg-body;
+  [type="radio"]:checked + label:before,
+  [type="radio"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    @apply bg-white;
+  }
 }
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
@@ -42,9 +57,8 @@ export default {
 [type="radio"]:checked + label,
 [type="radio"]:not(:checked) + label {
   position: relative;
-  padding-left: 40px;
+  padding-left: 45px;
   cursor: pointer;
-  line-height: 25px;
   display: inline-block;
   @apply text-gray-600;
 }
@@ -56,9 +70,8 @@ export default {
   top: 0;
   width: 25px;
   height: 25px;
-  border: 1px solid #ddd;
   border-radius: 100%;
-  @apply bg-white;
+  @apply bg-body;
 }
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
@@ -82,5 +95,11 @@ export default {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+[type="radio"]:checked + label:before {
+  @apply bg-white border border-secondary;
+}
+[type="radio"]:checked + label {
+  @apply text-secondary;
 }
 </style>

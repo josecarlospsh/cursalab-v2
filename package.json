@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "hooper": "^0.3.4",
     "vue": "^2.6.11",
     "vue-router": "^3.4.3",
+    "vueperslides": "^2.10.3",
     "vuescroll": "^4.16.1"
   },
   "devDependencies": {

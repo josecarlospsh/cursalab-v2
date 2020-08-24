@@ -15,22 +15,37 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-
+      body: "#f2f2f2",
       black: "#000",
       white: "#fff",
       primary: "#5458ea",
-      secondary: "#29ace6",
+      primary_hover: "#4B54C9",
+      primary_bg: "#E1E4FF",
+      secondary: "#29ABE2", //"#58c2e6", //"#29ace6",#2799C1
+      secondary_bg: "#defaff",
+      secondary_hover: "#2799C1",
+
       gray: {
         100: "#f7fafc",
         200: "#edf2f7",
-        300: "#e2e8f0",
-        400: "#cbd5e0",
-        500: "#a0aec0",
-        600: "#718096",
-        700: "#4a5568",
-        800: "#2d3748",
-        900: "#1a202c",
+        300: "#999999",
+        400: "#E6E6E6",
+        500: "#B3B3B3",
+        600: "#666666",
+        700: "#555555",
+        900: "#4d4d4d",
       },
+      // gray: {
+      //   100: "#f7fafc",
+      //   200: "#edf2f7",
+      //   300: "#e2e8f0",
+      //   400: "#cbd5e0",
+      //   500: "#a0aec0",
+      //   600: "#718096",
+      //   700: "#4a5568",
+      //   800: "#2d3748",
+      //   900: "#1a202c",
+      // },
       red: {
         100: "#fff5f5",
         200: "#fed7d7",
@@ -44,10 +59,10 @@ module.exports = {
       },
       orange: {
         100: "#fffaf0",
-        200: "#feebc8",
+        200: "#FFDBB8",
         300: "#fbd38d",
         400: "#f6ad55",
-        500: "#ed8936",
+        500: "#F7931E",
         600: "#dd6b20",
         700: "#c05621",
         800: "#9c4221",
@@ -66,9 +81,9 @@ module.exports = {
       },
       green: {
         100: "#f0fff4",
-        200: "#c6f6d5",
+        200: "#DAEAE7", //#c6f6d5
         300: "#9ae6b4",
-        400: "#68d391",
+        400: "#51B7AD", //#68d391
         500: "#48bb78",
         600: "#38a169",
         700: "#2f855a",
@@ -147,9 +162,13 @@ module.exports = {
       "20": "5rem",
       "24": "6rem",
       "32": "8rem",
+      "36": "9rem",
       "40": "10rem",
+      "44": "11rem",
       "48": "12rem",
+      "52": "13rem",
       "56": "14rem",
+      "60": "15rem",
       "64": "16rem",
     },
     backgroundColor: (theme) => theme("colors"),
@@ -190,6 +209,7 @@ module.exports = {
       "0": "0",
       "2": "2px",
       "4": "4px",
+      "6": "6px",
       "8": "8px",
     },
     boxShadow: {
@@ -208,6 +228,9 @@ module.exports = {
       inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
       outline: "0 0 0 3px rgba(66, 153, 225, 0.5)",
       none: "none",
+      sidemenu: "inset 1px 9px 6px -1px rgba(0, 0, 0, 0.1)",
+      header:
+        "0px 6px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 12px 12px rgba(0, 0, 0, 0.06)",
     },
     container: {},
     cursor: {
@@ -264,6 +287,8 @@ module.exports = {
         '"Courier New"',
         "monospace",
       ],
+      roboto: ["Roboto", "sans-serif"],
+      body: ['"Quicksand"'],
     },
     fontSize: {
       xs: "0.75rem",
@@ -296,8 +321,14 @@ module.exports = {
     }),
     inset: {
       "0": "0",
+      "-2": "-0.25rem",
       "-5": "-1rem",
+      "-8": "-1.5rem",
       "-10": "-2.5rem",
+      "2": "0.25rem",
+      "5": "1rem",
+      "8": "1.5rem",
+      "10": "2.5rem",
       auto: "auto",
       "1/2": "50%",
     },
@@ -780,16 +811,34 @@ module.exports = {
   },
   corePlugins: {},
   plugins: [
-    // plugin(function({ addUtilities }) {
-    //   const newcursalabText = {
-    //     ".text-primary": {
-    //       color: "#5458ea",
-    //     },
-    //     ".text-secondary": {
-    //       color: "#29ace6",
-    //     },
-    //   };
-    //   addUtilities(newcursalabText, ["responsive", "hover"]);
-    // }),
+    plugin(function({ addUtilities }) {
+      const textOverflow = {
+        ".text-overflow-1": {
+          overflow: "hidden",
+          display: "-webkit-box",
+          "-webkit-line-clamp": "1",
+          "-webkit-box-orient": "vertical",
+        },
+        ".text-overflow-2": {
+          overflow: "hidden",
+          display: "-webkit-box",
+          "-webkit-line-clamp": "2",
+          "-webkit-box-orient": "vertical",
+        },
+        ".text-overflow-3": {
+          overflow: "hidden",
+          display: "-webkit-box",
+          "-webkit-line-clamp": "3",
+          "-webkit-box-orient": "vertical",
+        },
+        ".text-overflow-4": {
+          overflow: "hidden",
+          display: "-webkit-box",
+          "-webkit-line-clamp": "4",
+          "-webkit-box-orient": "vertical",
+        },
+      };
+      addUtilities(textOverflow, ["responsive"]);
+    }),
   ],
 };

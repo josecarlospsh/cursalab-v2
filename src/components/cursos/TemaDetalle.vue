@@ -3,82 +3,42 @@
     <div class="flex flex-wrap">
       <div class="flex w-full lg:w-3/4 overflow-x-auto">
         <button
-          class="flex items-center bg-transparent hover:bg-secondary text-sm text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-secondary hover:border-transparent rounded"
+          class="flex items-center bg-secondary text-sm text-white py-2 px-3 mr-3 border border-secondary rounded-lg"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="clipboard-list w-6 h-6 mr-1"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-            />
-          </svg>
-          <span>About</span>
+          <IconSvg name="content-text" />
+          <span class="font-bold">About</span>
         </button>
         <button
-          class="flex items-center bg-transparent hover:bg-secondary text-sm text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-secondary hover:border-transparent rounded"
+          class="flex items-center bg-transparent hover:bg-secondary_bg text-sm text-gray-600 py-2 px-3 mr-3 border border-secondary rounded-lg"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="clipboard-list w-6 h-6 mr-1"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-            />
-          </svg>
-          <span>Contenido uno</span>
+          <IconSvg name="content-text" />
+          <span class="font-bold">Contenido uno</span>
         </button>
         <button
-          class="flex items-center bg-transparent hover:bg-secondary text-sm text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-secondary hover:border-transparent rounded"
+          class="flex items-center bg-transparent hover:bg-secondary_bg text-sm text-gray-600 py-2 px-3 mr-3 border border-secondary rounded-lg"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="clipboard-list w-6 h-6 mr-1"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-            />
-          </svg>
-          <span>Contenido dos</span>
+          <IconSvg name="content-audio" />
+          <IconSvg name="content-pdf" />
+          <span class="font-bold">Contenido dos</span>
         </button>
         <button
-          class="flex items-center bg-transparent hover:bg-secondary text-sm text-gray-700 font-semibold hover:text-white py-2 px-4 mx-2 border border-secondary hover:border-transparent rounded"
+          class="flex items-center bg-transparent hover:bg-secondary_bg text-sm text-gray-600 py-2 px-3 mr-3 border border-secondary rounded-lg"
         >
-          <svg
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="clipboard-list w-6 h-6 mr-1"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-            />
-          </svg>
-          <span>Contenido Lorem</span>
+          <IconSvg name="content-text" />
+          <span class="font-bold">Contenido Lorem</span>
+        </button>
+        <button
+          class="flex items-center bg-transparent hover:bg-secondary_bg text-sm text-gray-600 py-2 px-3 mr-3 border border-secondary rounded-lg"
+        >
+          <IconSvg name="content-pdf" />
+          <IconSvg name="content-play" />
+          <span class="font-bold">Contenido Lorem</span>
         </button>
       </div>
 
       <div class="flex items-center w-full my-6 lg:my-0 justify-center lg:justify-end lg:w-1/4">
         <router-link
-          class="bg-primary shadow-3xl text-sm text-white text-center uppercase font-medium py-3 px-4 md:px-8 rounded-full"
+          class="bg-primary hover:bg-primary_hover shadow-3xl text-sm text-white text-center uppercase font-medium py-3 px-4 md:px-8 rounded-full"
           :to="{ name: 'evaluacion' }"
         >Resolver evaluacion</router-link>
       </div>

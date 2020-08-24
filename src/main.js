@@ -2,7 +2,12 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import vuescroll from "vuescroll";
+import IconSvg from "@/components/ui/IconSvg.vue";
 
+Vue.component("IconSvg", IconSvg);
+
+// import the css file
+import "vuescroll/dist/vuescroll.css";
 import "@/assets/css/tailwind.css";
 
 Vue.config.productionTip = false;
