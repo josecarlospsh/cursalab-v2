@@ -3,11 +3,16 @@ import VueRouter from "vue-router";
 
 import Home from "@/pages/Home.vue";
 import Cursos from "@/pages/Cursos.vue";
-import Progreso from "@/pages/Progreso.vue";
 import Tema from "@/pages/Tema.vue";
 import Evaluacion from "@/pages/Evaluacion.vue";
 import Faq from "@/pages/Faq.vue";
 import Ayuda from "@/pages/Ayuda.vue";
+// import Progreso from "@/pages/Progreso.vue";
+import ProgresoCursos from "@/pages/ProgresoCursos.vue";
+import ProgresoDiplomas from "@/pages/ProgresoDiplomas.vue";
+import ProgresoMedallas from "@/pages/ProgresoMedallas.vue";
+import ProgresoRanking from "@/pages/ProgresoRanking.vue";
+import ProgresoEncuestas from "@/pages/ProgresoEncuestas.vue";
 import Archivo from "@/pages/Archivo.vue";
 import Login from "@/pages/Login.vue";
 
@@ -41,7 +46,7 @@ const routes = [
   {
     path: "/progreso",
     name: "progreso",
-    component: Progreso,
+    component: ProgresoCursos,
     meta: {
       title: "Progreso",
     },
@@ -49,7 +54,7 @@ const routes = [
   {
     path: "/diplomas",
     name: "diplomas",
-    component: Progreso,
+    component: ProgresoDiplomas,
     meta: {
       title: "Diplomas",
     },
@@ -57,7 +62,7 @@ const routes = [
   {
     path: "/ranking",
     name: "ranking",
-    component: Progreso,
+    component: ProgresoRanking,
     meta: {
       title: "Ranking",
     },
@@ -65,7 +70,7 @@ const routes = [
   {
     path: "/medallas",
     name: "medallas",
-    component: Progreso,
+    component: ProgresoMedallas,
     meta: {
       title: "Medallas",
     },
@@ -73,7 +78,7 @@ const routes = [
   {
     path: "/encuestas",
     name: "encuestas",
-    component: Progreso,
+    component: ProgresoEncuestas,
     meta: {
       title: "Encuestas",
     },

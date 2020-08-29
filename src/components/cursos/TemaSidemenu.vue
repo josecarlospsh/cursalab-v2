@@ -3,20 +3,23 @@
     <div class="flex flex-row flex-wrap w-full border-b border-gray-500">
       <div class="flex justify-center w-1/3">
         <button
-          class="border-b-6 border-primary pb-4 font-bold text-primary"
-          @click="toggleTab('mis-cursos')"
+          class="tab-item"
+          :class="[ (tabName == 'mis-cursos') ? 'active' : '']"
+          @click.prevent="toggleTab('mis-cursos')"
         >Mis cursos</button>
       </div>
       <div class="flex justify-center w-1/3">
         <button
-          class="border-b-6 border-transparent pb-4 font-bold text-gray-600"
-          @click="toggleTab('mis-apuntes')"
+          class="tab-item"
+          :class="[ (tabName == 'mis-apuntes') ? 'active' : '']"
+          @click.prevent="toggleTab('mis-apuntes')"
         >Apuntes</button>
       </div>
       <div class="flex justify-center w-1/3">
         <button
-          class="border-b-6 border-transparent pb-4 font-bold text-gray-600"
-          @click="toggleTab('mis-avances')"
+          class="tab-item"
+          :class="[ (tabName == 'mis-avances') ? 'active' : '']"
+          @click.prevent="toggleTab('mis-avances')"
         >Mis avances</button>
       </div>
     </div>
@@ -54,4 +57,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.tab-item {
+  @apply relative w-full font-bold text-center text-gray-600 py-4;
+  &::after {
+    @apply absolute h-2 w-full bg-transparent rounded-lg left-0 -bottom-2;
+    content: "";
+  }
+  &.active,
+  &.router-link-active {
+    @apply text-primary;
+    &::after {
+      @apply bg-primary;
+    }
+  }
+}
 </style>
