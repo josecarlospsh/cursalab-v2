@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import TemaTitle from "@/components/cursos/TemaTitle.vue";
-import TemaMultimedia from "@/components/cursos/TemaMultimedia.vue";
-import TemaDetalle from "@/components/cursos/TemaDetalle.vue";
-import TemaSidemenu from "@/components/cursos/TemaSidemenu.vue";
+import TemaTitle from "@/components/temas/TemaTitle.vue";
+import TemaMultimedia from "@/components/temas/TemaMultimedia.vue";
+import TemaDetalle from "@/components/temas/TemaDetalle.vue";
+import TemaSidemenu from "@/components/temas/TemaSidemenu.vue";
 
 export default {
   components: {

@@ -6,7 +6,7 @@ import IconSvg from "@/components/ui/IconSvg.vue";
 
 Vue.component("IconSvg", IconSvg);
 
-// import the css file
+//Importar estilos
 import "vuescroll/dist/vuescroll.css";
 import "@/assets/css/tailwind.css";
 

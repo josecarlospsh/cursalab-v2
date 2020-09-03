@@ -7,12 +7,26 @@ import Tema from "@/pages/Tema.vue";
 import Evaluacion from "@/pages/Evaluacion.vue";
 import Faq from "@/pages/Faq.vue";
 import Ayuda from "@/pages/Ayuda.vue";
-// import Progreso from "@/pages/Progreso.vue";
-import ProgresoCursos from "@/pages/ProgresoCursos.vue";
-import ProgresoDiplomas from "@/pages/ProgresoDiplomas.vue";
-import ProgresoMedallas from "@/pages/ProgresoMedallas.vue";
-import ProgresoRanking from "@/pages/ProgresoRanking.vue";
-import ProgresoEncuestas from "@/pages/ProgresoEncuestas.vue";
+import CursosResumen from "@/pages/CursosResumen.vue";
+import Diplomas from "@/pages/Diplomas.vue";
+import Ranking from "@/pages/Ranking.vue";
+import Medallas from "@/pages/Medallas.vue";
+import Encuestas from "@/pages/Encuestas.vue";
+
+/**
+ * Vistas para version movil
+ * UPDATE: En desarrollo - Para ver solo poner en el browser el route->path de la vista
+ */
+import HomeMobile from "@/pages/mobile/HomeMobile.vue";
+import CursosMobile from "@/pages/mobile/CursosMobile.vue";
+import TemaMobile from "@/pages/mobile/TemaMobile.vue";
+import EvaluacionMobile from "@/pages/mobile/EvaluacionMobile.vue";
+import CursosResumenMobile from "@/pages/mobile/CursosResumenMobile.vue";
+import DiplomasMobile from "@/pages/mobile/DiplomasMobile.vue";
+import RankingMobile from "@/pages/mobile/RankingMobile.vue";
+import MedallasMobile from "@/pages/mobile/MedallasMobile.vue";
+import EncuestasMobile from "@/pages/mobile/EncuestasMobile.vue";
+
 import Archivo from "@/pages/Archivo.vue";
 import Login from "@/pages/Login.vue";
 
@@ -24,7 +38,15 @@ const routes = [
     name: "inicio",
     component: Home,
     meta: {
-      title: "Inicio",
+      title: "Anuncios",
+    },
+  },
+  {
+    path: "/anunciosmb",
+    name: "anunciosmb",
+    component: HomeMobile,
+    meta: {
+      title: "Inicio Mobile",
     },
   },
   {
@@ -44,43 +66,91 @@ const routes = [
     },
   },
   {
+    path: "/cursosmb",
+    name: "cursosmb",
+    component: CursosMobile,
+    meta: {
+      title: "Cursos Mobile",
+    },
+  },
+  {
     path: "/progreso",
     name: "progreso",
-    component: ProgresoCursos,
+    component: CursosResumen,
     meta: {
       title: "Progreso",
     },
   },
   {
+    path: "/progresomb",
+    name: "progresomb",
+    component: CursosResumenMobile,
+    meta: {
+      title: "Progreso Mobile",
+    },
+  },
+  {
     path: "/diplomas",
     name: "diplomas",
-    component: ProgresoDiplomas,
+    component: Diplomas,
     meta: {
       title: "Diplomas",
     },
   },
   {
+    path: "/diplomasmb",
+    name: "diplomasmb",
+    component: DiplomasMobile,
+    meta: {
+      title: "Diplomas Mobile",
+    },
+  },
+  {
     path: "/ranking",
     name: "ranking",
-    component: ProgresoRanking,
+    component: Ranking,
     meta: {
       title: "Ranking",
     },
   },
   {
+    path: "/rankingmb",
+    name: "rankingmb",
+    component: RankingMobile,
+    meta: {
+      title: "Ranking Mobile",
+    },
+  },
+  {
     path: "/medallas",
     name: "medallas",
-    component: ProgresoMedallas,
+    component: Medallas,
     meta: {
       title: "Medallas",
     },
   },
   {
+    path: "/medallasmb",
+    name: "medallasmb",
+    component: MedallasMobile,
+    meta: {
+      title: "Medallas Mobile",
+    },
+  },
+  {
     path: "/encuestas",
     name: "encuestas",
-    component: ProgresoEncuestas,
+    component: Encuestas,
     meta: {
       title: "Encuestas",
+    },
+  },
+  {
+    path: "/encuestasmb",
+    name: "encuestasmb",
+    component: EncuestasMobile,
+    meta: {
+      title: "Encuestas Mobile",
     },
   },
   {
@@ -92,11 +162,27 @@ const routes = [
     },
   },
   {
+    path: "/temamb",
+    name: "temamb",
+    component: TemaMobile,
+    meta: {
+      title: "Tema Mobile",
+    },
+  },
+  {
     path: "/evaluacion",
     name: "evaluacion",
     component: Evaluacion,
     meta: {
       title: "Evaluacion",
+    },
+  },
+  {
+    path: "/evaluacionmb",
+    name: "evaluacionmb",
+    component: EvaluacionMobile,
+    meta: {
+      title: "Evaluacion Mobile",
     },
   },
   {

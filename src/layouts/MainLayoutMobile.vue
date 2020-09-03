@@ -1,14 +1,15 @@
 <template>
-  <div class="mx-4 md:ml-20 md:mr-56 pt-24 pb-12">
-    <!-- <NavBar /> -->
-    <slot></slot>
+  <div class="mx-4 pt-8 pb-24">
+    <div class="px-3 w-full">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
 <script>
 // import NavBar from "@/components/layouts/NavBar.vue";
 export default {
-  name: "MainLayout",
+  name: "MainLayoutMobile",
   components: {
     // NavBar,
   },

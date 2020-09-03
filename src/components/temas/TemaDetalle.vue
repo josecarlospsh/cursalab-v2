@@ -82,4 +82,26 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+::-webkit-scrollbar {
+  @apply bg-gray-400;
+  padding: 10px;
+  width: 5px;
+  height: 3px;
+  // display: none;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(131, 131, 131, 0.315);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-900;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  @apply bg-gray-600;
+}
+::placeholder {
+  @apply text-gray-600;
+}
+</style>

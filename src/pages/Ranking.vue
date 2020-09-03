@@ -1,22 +1,29 @@
 <template>
   <div class="progreso-ranking">
-    <Progreso>
+    <ProgresoLayout>
       <div class="ranking-content">
         <div class="flex flex-col md:flex-row mx-0 md:mx-6">
           <h2 class="font-normal mr-5">Elige el tipo de Ranking:</h2>
-          <select
-            type="text"
-            class="bg-body rounded-lg py-1 pl-6 pr-24 mt-3 md:mt-0 border border-gray-600"
-          >
-            <option value>Mi oficina</option>
-            <option value>General</option>
-          </select>
+          <div class="relative mt-3 md:mt-0">
+            <select
+              type="text"
+              class="w-full bg-body rounded-lg py-1 pl-6 pr-24 border border-gray-600 appearance-none"
+            >
+              <option value>Mi oficina</option>
+              <option value>General</option>
+            </select>
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+            >
+              <IconSvg name="chevron-down" classes="h-4 w-4" />
+            </div>
+          </div>
         </div>
         <div class="ranking-dt my-8 border border-gray-600 rounded-xl">
           <table class="table-auto text-gray-600 font-normal w-full">
             <thead>
               <tr class="border-b border-gray-600">
-                <th class="w-1/6 px-6 p-1 md:pb-2 pt-6 text-left font-bold">Puesto</th>
+                <th class="w-1/6 px-2 md:px-6 md:pb-2 pt-6 text-left font-bold">Puesto</th>
                 <th class="w-3/6 p-1 md:pb-2 pt-6 text-left font-bold">Nombre</th>
                 <th class="w-1/6 p-1 md:pb-2 pt-6 text-left font-bold">Mi oficina</th>
                 <th class="w-1/6 p-1 md:pb-2 pt-6 text-left font-bold">Puntos</th>
@@ -24,7 +31,7 @@
             </thead>
             <tbody class="py-6">
               <tr>
-                <td class="w-1/6 px-8 p-1 md:pb-3 pt-8">
+                <td class="w-1/6 px-4 md:px-8 py-1 md:pb-3 pt-8">
                   <div class="flex items-center">
                     <span class="mr-0 md:mr-6">01</span>
                     <img
@@ -39,7 +46,7 @@
                 <td class="w-1/6 p-1 md:pb-3 pt-8">180 puntos</td>
               </tr>
               <tr class="bg-secondary_bg text-secondary font-bold">
-                <td class="w-1/6 px-8 p-1 md:py-3">
+                <td class="w-1/6 px-4 md:px-8 md:py-3">
                   <div class="flex items-center">
                     <span class="mr-0 md:mr-6">02</span>
                     <img
@@ -54,7 +61,7 @@
                 <td class="w-1/6 p-1 md:py-3">180 puntos</td>
               </tr>
               <tr>
-                <td class="w-1/6 px-8 p-1 md:pt-3 pb-8">
+                <td class="w-1/6 px-4 md:px-8 md:pt-3 pb-8">
                   <div class="flex items-center">
                     <span class="mr-0 md:mr-6">03</span>
                     <img
@@ -72,15 +79,15 @@
           </table>
         </div>
       </div>
-    </Progreso>
+    </ProgresoLayout>
   </div>
 </template>
 
 <script>
-import Progreso from "@/pages/Progreso.vue";
+import ProgresoLayout from "@/layouts/ProgresoLayout.vue";
 export default {
   components: {
-    Progreso,
+    ProgresoLayout,
   },
 };
 </script>

@@ -1,25 +1,26 @@
 <template>
   <div class="header">
-    <div class="flex flex-row pl-4 pr-0 md:pl-10 items-center justify-between h-full">
-      <div class="logo md:mr-auto">
-        <router-link :to="{ name: 'inicio' }" class="brand mr-auto">
-          <img src="../../assets/logo.svg" alt="Cursalab" width="150" class />
-        </router-link>
-      </div>
+    <div class="flex flex-row justify-between h-full">
       <nav class="navmenu">
-        <router-link :to="{ name: 'anuncios' }" class="nav-item">Anuncios</router-link>
-        <router-link :to="{ name: 'cursos' }" class="nav-item">Cursos</router-link>
-        <router-link :to="{ name: 'progreso' }" class="nav-item">Progreso</router-link>
-        <div class="opsidemenu">
+        <router-link :to="{ name: 'anunciosmb' }" class="nav-item">
+          <IconSvg name="speakerphone" />Anuncios
+        </router-link>
+        <router-link :to="{ name: 'cursosmb' }" class="nav-item">
+          <IconSvg name="book-open" />Cursos
+        </router-link>
+        <router-link :to="{ name: 'progresomb' }" class="nav-item">
+          <IconSvg name="book-open" />Progreso
+        </router-link>
+        <div @click.prevent="toggleSidemenu" class="opsidemenu">
           <div class="user flex items-center">
             <img
-              class="w-10 h-10 rounded-full mr-0 md:mr-4"
+              class="w-8 h-8 rounded-full mr-2"
               src="https://scontent.flim8-1.fna.fbcdn.net/v/t31.0-1/c0.0.160.160a/p160x160/1957720_10202680309021840_1243974886_o.jpg?_nc_cat=109&_nc_sid=dbb9e7&_nc_eui2=AeE-eoKP7fAqWJVc3w-N4eT32iZcuvlB2QraJly6-UHZCj10zmI1T5CFplXSDYPcv6Q&_nc_ohc=qYSNIQIkUmoAX_egmhj&_nc_ht=scontent.flim8-1.fna&oh=126d319215a8cd1e881141028e9a6e4f&oe=5F59033E"
               alt="JC"
             />
-            <span class="hidden md:text-overflow-1">Jose Carlos Pajuelo</span>
+            <span class="text-overflow-1">Jose Carlos Pajuelo</span>
           </div>
-          <button @click.prevent="toggleSidemenu" class="bnsidemenu ml-5">
+          <button class="bnsidemenu ml-2">
             <svg
               fill="none"
               viewBox="0 0 24 24"
@@ -44,10 +45,10 @@
           </button>
           <div class="sidemenu" :class="{ 'active' : isSidemenuActive }">
             <div>
-              <router-link :to="{ name: 'diplomas' }" class="sidemenu-item" data-title="Diplomas">
+              <router-link :to="{ name: 'diplomasmb' }" class="sidemenu-item" data-title="Diplomas">
                 <svg
                   fill="none"
-                  class="academic-cap fill-current w-6 h-6 mx-5"
+                  class="academic-cap fill-current w-6 h-6 mr-5"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 21.31 21.48"
                 >
@@ -78,12 +79,12 @@
                     transform="translate(-960 -529.26)"
                   />
                 </svg>
-                <span class="text-sm md:text-lg">Diplomas</span>
+                <span class="text-xs">Diplomas</span>
               </router-link>
-              <router-link :to="{ name: 'ranking' }" class="sidemenu-item" data-title="Ranking">
+              <router-link :to="{ name: 'rankingmb' }" class="sidemenu-item" data-title="Ranking">
                 <svg
                   fill="none"
-                  class="chart-bar fill-current w-6 h-6 mx-5"
+                  class="chart-bar fill-current w-6 h-6 mr-5"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 21.13 27"
                 >
@@ -108,12 +109,12 @@
                     transform="translate(-949.44 -526.5)"
                   />
                 </svg>
-                <span class="text-sm md:text-lg">Ranking</span>
+                <span class="text-xs">Ranking</span>
               </router-link>
-              <router-link :to="{ name: 'medallas' }" class="sidemenu-item" data-title="Medallas">
+              <router-link :to="{ name: 'medallasmb' }" class="sidemenu-item" data-title="Medallas">
                 <svg
                   fill="none"
-                  class="badge-check fill-current w-6 h-6 mx-5"
+                  class="badge-check fill-current w-6 h-6 mr-5"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 19.55"
                 >
@@ -133,12 +134,16 @@
                     transform="translate(-950 -530.23)"
                   />
                 </svg>
-                <span class="text-sm md:text-lg">Medallas</span>
+                <span class="text-xs">Medallas</span>
               </router-link>
-              <router-link :to="{ name: 'encuestas' }" class="sidemenu-item" data-title="Encuestas">
+              <router-link
+                :to="{ name: 'encuestasmb' }"
+                class="sidemenu-item"
+                data-title="Encuestas"
+              >
                 <svg
                   fill="none"
-                  class="clipboard-list fill-current w-6 h-6 mx-5"
+                  class="clipboard-list fill-current w-6 h-6 mr-5"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16.44 21.04"
                 >
@@ -183,13 +188,13 @@
                     transform="translate(-951.78 -529.48)"
                   />
                 </svg>
-                <span class="text-sm md:text-lg">Encuestas</span>
+                <span class="text-xs">Encuestas</span>
               </router-link>
               <div class="sepmenu"></div>
               <router-link :to="{ name: 'ayuda' }" class="sidemenu-item" data-title="Ayuda">
                 <svg
                   fill="none"
-                  class="question-mark-circle fill-current w-6 h-6 mx-5"
+                  class="question-mark-circle fill-current w-6 h-6 mr-5"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 25.2 25.2"
                 >
@@ -210,12 +215,12 @@
                     transform="translate(-947.4 -527.4)"
                   />
                 </svg>
-                <span class="text-sm md:text-lg">Ayuda</span>
+                <span class="text-xs">Ayuda</span>
               </router-link>
               <router-link :to="{ name: 'faq' }" class="sidemenu-item" data-title="Preguntas frec.">
                 <svg
                   fill="none"
-                  class="chat-alt2 fill-current w-6 h-6 mx-5"
+                  class="chat-alt2 fill-current w-6 h-6 mr-5"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 22.88 22.89"
                 >
@@ -230,12 +235,12 @@
                     transform="translate(-948.56 -528.56)"
                   />
                 </svg>
-                <span class="text-sm md:text-lg">Preguntas frec.</span>
+                <span class="text-xs">Preguntas frec.</span>
               </router-link>
               <router-link :to="{ name: 'archivo' }" class="sidemenu-item" data-title="Archivo">
                 <svg
                   fill="none"
-                  class="folder fill-current w-6 h-6 mx-5"
+                  class="folder fill-current w-6 h-6 mr-5"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20.42 19.43"
                 >
@@ -250,12 +255,12 @@
                     transform="translate(-949.79 -530.29)"
                   />
                 </svg>
-                <span class="text-sm md:text-lg">Archivo</span>
+                <span class="text-xs">Archivo</span>
               </router-link>
               <router-link :to="{ name: 'login' }" class="sidemenu-item" data-title="Cerrar Sesión">
                 <svg
                   fill="none"
-                  class="logout fill-current w-6 h-6 mx-5"
+                  class="logout fill-current w-6 h-6 mr-5"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 38.19 21.19"
                 >
@@ -270,7 +275,7 @@
                     transform="translate(-940.91 -529.41)"
                   />
                 </svg>
-                <span class="text-sm md:text-lg">Cerrar Sesión</span>
+                <span class="text-xs">Cerrar Sesión</span>
               </router-link>
             </div>
           </div>
@@ -318,128 +323,75 @@ export default {
 $color-white: #ffffff;
 $color-primary: #5458ea;
 $color-secondary: #29ace6;
+.mobile .header {
+  @apply bg-primary bottom-0 text-white;
+}
 .header {
   @apply fixed w-full bg-white shadow-header;
   z-index: 9999;
   height: 64px;
 }
 .navmenu {
-  @apply flex items-center content-center;
+  @apply flex justify-between w-full;
   .nav-item {
-    @apply relative font-semibold text-primary mx-8 py-4 hidden;
-    &::after {
-      @apply absolute h-1 w-full bg-transparent rounded-sm left-0 -bottom-2;
-      content: "";
+    width: 62px;
+    @apply relative text-xs font-normal text-white px-5 py-2 flex flex-col items-center justify-center text-center;
+    svg {
+      @apply mb-1;
     }
     &.active,
     &.router-link-active {
-      @apply text-secondary;
-      &::after {
-        @apply bg-secondary;
-      }
-    }
-    @screen lg {
-      & {
-        @apply inline-block;
-      }
+      @apply bg-primary_hover;
     }
   }
 }
 .sepmenu {
-  margin-top: 7rem;
+  margin-top: 2.5rem;
 }
 .opsidemenu {
   position: relative;
   background-color: $color-primary;
   color: $color-white;
   z-index: 10;
-  @apply flex items-center justify-between py-3 px-6;
-  width: 100%;
-  @screen md {
-    & {
-      @apply px-8;
-      width: 21rem;
-    }
-  }
+  @apply flex items-center justify-between py-2 px-4 text-xs;
+  width: 52%;
+  cursor: pointer;
 }
 .sidemenu {
   background-color: $color-primary;
   position: absolute;
-  height: calc(100vh - 64px);
+  height: calc(98vh - 64px);
   width: 0;
-  top: 100%;
+  bottom: 100%;
   right: 0;
   overflow-y: auto;
   z-index: 9;
-  @apply shadow-sidemenu;
   @media screen and(min-width: 768px) {
     width: 35%;
     width: 7.5rem;
     overflow-y: initial;
   }
-  &:not(.active) {
-    .sidemenu-item {
-      // &:after {
-      //   @apply absolute bg-primary text-white text-center;
-      //   content: attr(data-title);
-      //   top: 0;
-      //   right: 0;
-      //   width: 100%;
-      //   height: 100%;
-      //   opacity: 0;
-      //   pointer-events: none;
-      // }
-      &:hover {
-        @apply text-white;
-        &:after {
-          opacity: 1;
-        }
-        span {
-          @apply absolute flex justify-center items-center bg-primary text-white text-center;
-          top: 0;
-          right: 0;
-          width: 13.5rem;
-          height: 100%;
-          margin-right: 7.5rem;
-          opacity: 1;
-          pointer-events: none;
-        }
-      }
-    }
-  }
   .sidemenu-item {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     justify-content: center;
     align-content: center;
     display: flex;
     position: relative;
-    @apply flex-col items-center text-white py-4 px-4;
-    @screen md {
-      @apply flex-row px-12;
-    }
+    @apply flex-row items-center text-white py-4 px-6;
     &:hover {
       @apply text-secondary;
     }
     &:first-child {
-      margin-top: 2.5rem;
+      margin-top: 1.5rem;
     }
-    &:last-child {
-      @apply bg-primary_hover;
-    }
-
     svg {
       width: 1.3rem;
       height: 1.3rem;
       margin: 0;
     }
-    span {
-      display: none;
-    }
   }
   &.active {
-    border-top: 1px solid $color-secondary;
     width: 100%;
-    @apply shadow-none;
     .sidemenu-item {
       justify-content: start;
       a[title]:hover:after {
@@ -447,12 +399,13 @@ $color-secondary: #29ace6;
         position: absolute;
       }
       svg {
-        margin: 0 1rem;
+        margin-right: 1rem;
         // height: auto;
         //   display: inline-flex;
       }
-      span {
-        display: inline-block;
+      &.active,
+      &.router-link-active {
+        @apply bg-primary_hover;
       }
     }
   }

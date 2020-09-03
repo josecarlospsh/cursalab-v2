@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-4 md:ml-20 md:mr-56 pt-24 pb-12">
+  <div class="pb-24">
     <!-- <NavBar /> -->
     <slot></slot>
   </div>
@@ -8,7 +8,7 @@
 <script>
 // import NavBar from "@/components/layouts/NavBar.vue";
 export default {
-  name: "MainLayout",
+  name: "TemaLayoutMobile",
   components: {
     // NavBar,
   },

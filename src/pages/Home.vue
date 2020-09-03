@@ -66,7 +66,7 @@
               src="https://static.universidadcorporativafp.com.pe/images/1194402608.png"
               alt
             />
-            <div class="relative p-6 xl:pb-24">
+            <div class="p-6 xl:pb-24">
               <div
                 class="lg:text-overflow-2 text-gray-600 font-bold text-xl md:text-2xl leading-6 md:leading-8 mb-4"
               >Titular del anuncio lorem ipsum dolor sit amet</div>

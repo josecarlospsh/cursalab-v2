@@ -1,6 +1,6 @@
 <template>
   <div class="mx-4 md:ml-24 md:mr-40 pt-24 pb-12">
-    <Logo />
+    <Logo classes="my-8" />
     <TabNavigation :page="page" />
     <div class="p-10 lg:p-12 w-full lg:max-w-full bg-white rounded-t-xxl rounded-b-xxl shadow-lg">
       <!-- <router-view></router-view> -->

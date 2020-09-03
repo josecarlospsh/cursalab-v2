@@ -1,11 +1,21 @@
 <template>
-  <div class="logo flex justify-center text-center my-8">
-    <img src="../../assets/logo.svg" alt="Cursalab" width="220" class />
+  <div class="logo flex justify-center text-center" :class="classes">
+    <img src="../../assets/logo.svg" alt="Cursalab" :width="width" />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    width: {
+      type: [Number, String],
+      default: 220,
+    },
+    classes: {
+      type: String,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

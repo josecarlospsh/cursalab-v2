@@ -24,7 +24,6 @@ module.exports = {
       secondary: "#29ABE2", //"#58c2e6", //"#29ace6",#2799C1
       secondary_bg: "#defaff",
       secondary_hover: "#2799C1",
-
       gray: {
         100: "#f7fafc",
         200: "#edf2f7",

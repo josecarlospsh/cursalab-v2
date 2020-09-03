@@ -1,12 +1,15 @@
 <template>
-  <div class="progreso-encuestas">
-    <Progreso>
+  <div class="encuestas-mobile">
+    <MainLayoutMobile>
       <div class="encuestas-content">
-        <div class="flex mb-2 mx-12 font-normal text-red-600">
-          <IconSvg name="emoji-sad" />
-          <span class="font-bold">Tienes 1 encuesta sin resolver</span>
+        <div class="mb-6 text-center">
+          <h2 class="text-2xl font-bold text-primary">Encuestas</h2>
         </div>
-        <div class="encuesta-preg my-2 py-4 px-0 border border-gray-600 rounded-xl">
+        <div class="flex justify-center mb-2 mx-3 font-normal text-red-600">
+          <IconSvg name="emoji-sad" classes="w-4 h-4" />
+          <span class="font-bold text-base">Tienes 1 encuesta sin resolver</span>
+        </div>
+        <div class="encuesta-preg bg-white mt-10 mb-2 py-4 px-0 rounded-xl shadow-lg">
           <EncuestaPregunta
             v-for="(pregunta, index) in preguntasEnc"
             :title="pregunta.title"
@@ -21,16 +24,16 @@
           </div>
         </div>
       </div>
-    </Progreso>
+    </MainLayoutMobile>
   </div>
 </template>
 
 <script>
-import Progreso from "@/pages/Progreso.vue";
+import MainLayoutMobile from "@/layouts/MainLayoutMobile.vue";
 import EncuestaPregunta from "@/components/encuestas/EncuestaPregunta.vue";
 export default {
   components: {
-    Progreso,
+    MainLayoutMobile,
     EncuestaPregunta,
   },
   data() {

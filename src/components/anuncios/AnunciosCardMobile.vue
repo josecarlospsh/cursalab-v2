@@ -1,10 +1,10 @@
 <template>
   <div
-    class="flex justify-center pt-10 p-4 w-full"
+    class="flex justify-center py-12 w-full"
     :class="[viewList ? 'w-full' : ' lg:w-1/2 xl:w-1/3']"
   >
     <div class="flex flex-wrap relative" :class="[viewList ? 'w-full' : '']">
-      <p class="absolute -top-10 text-base text-gray-600 px-6 py-2">{{date}}</p>
+      <p class="absolute -top-10 text-base text-gray-600 py-2">{{date}}</p>
       <div
         class="w-full lg:max-w-full bg-white rounded-t-xl rounded-b-xl shadow-lg flex"
         :class="[viewList ? 'flex-row' : 'max-w-sm flex-col']"
@@ -24,7 +24,7 @@
           <div class="flex justify-center">
             <button
               :class="[viewList ? 'xl:right-10' : '']"
-              class="xl:absolute xl:bottom-10 flex items-center bg-primary shadow-3xl hover:bg-primary_hover text-sm md:text-base text-white uppercase font-medium py-3 px-5 md:px-10 rounded-full"
+              class="absolute -bottom-8 flex items-center bg-primary shadow-3xl hover:bg-primary_hover text-sm md:text-base text-white uppercase font-medium py-3 px-5 rounded-full"
             >
               <IconSvg v-if="buttonIcon == 'eye'" name="eye" />
               <IconSvg v-if="buttonIcon == 'cloud-download'" name="cloud-download" />
